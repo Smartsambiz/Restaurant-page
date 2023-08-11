@@ -1,203 +1,251 @@
-body{
-    font-family: Arial, sans-serif;
+body {
+  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
-  
 }
 
 #content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-   
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.slidingImage {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: sticky;
+}
+
+.slidingImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Use rgba() to set a semi-transparent black background */
+  z-index: -1;
+}
 
 .headerContainer {
-    background-image: url(https://hintng.com/wp-content/uploads/2018/04/nigerian-delicacies-1.jpg);
-    background-size: cover; 
-    background-position: center;
-    height: 400px;
-    position: sticky;
- }
- 
- .headerContainer::before {
-     content: "";
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.6); /* Use rgba() to set a semi-transparent black background */
-     z-index: -1;
- }
- 
- .welcomeContainer {
-     position: absolute; 
-     top: 50%; 
-     left: 50%; 
-     transform: translate(-50%, -50%); 
-     text-align: center; 
-     color: white; 
-     padding: 20px; 
-    
- }
- 
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: silver;
+  background-position: center;
+}
 
- .eP{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    background-color: gold;
-    padding-left: 10px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
- }
+.welcomeContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  margin-left: 20px;
+  background-color: rgba(85, 85, 85, 0.2);
+  padding: 20px; /* Add padding for better visibility */
+}
 
- /*styling the tabs */
- .tab {
-    /* Add your desired button styles */
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px; 
-    background-color: purple;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
+.eP {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  background-color: gold;
+  padding-left: 10px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*styling the tabs */
+.tab {
+  /* Add your desired button styles */
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: purple;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab:hover {
+  background-color: silver;
+}
+
+#home-btn:active,
+#menu-btn:active,
+#contact-btn:active {
+  background-color: silver;
+}
+
+/*styling the form*/
+
+form {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+/* styling the menu*/
+
+.mainMenu {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/*styling contactinfo*/
+.contactInfo,
+.openingHours,
+.socialmedia,
+.specialEvents {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for the arrow buttons */
+.arrow-button {
+  background-color: silver;
+  border: none;
+  font-size: 24px;
+  color: #333; /* Change this color as needed */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-button:hover {
+  color: #555; /* Change this color for hover effect */
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .mainMenu {
+    width: 100%;
   }
-  
-  .tab:hover {
-    background-color: silver;
-  }
-  
-  #home-btn:active,
-  #menu-btn:active,
-  #contact-btn:active {
-    background-color: silver;
-  }  
+}
 
-
-  /*styling the form*/
-
-  
+/* Media query for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
   form {
-    background-color: #ffffff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
   }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
+
   input[type="text"],
   input[type="email"],
   textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
   }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  input[type="submit"] {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  input[type="submit"]:focus {
-    outline: none;
-  }
+}
 
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
 
-  /* styling the menu*/
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-
-  .mainMenu {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  /*styling contactinfo*/
-  .contactInfo,
-  .openingHours,
-  .socialmedia,
-  .specialEvents{
-    background-color: #ffffff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
- 
-  
-
- 
-/* Media query for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
-    .mainMenu {
-      width: 100%; 
-    }
-  }
-  
-  /* Media query for screens with a maximum width of 480px */
-  @media screen and (max-width: 480px) {
-    form {
-      max-width: 100%; 
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%; 
-    }
-  }
-  
-  
+.dot.active {
+  background-color: #333;
+}
